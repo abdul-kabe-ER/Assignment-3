@@ -1,21 +1,18 @@
 import 'dart:io';
 
 void main() {
-  String predefinedEmail = 'user@example.com';
-  String predefinedPassword = 'password123';
+  int rows = 4;
   
-  while (true) {
-    stdout.write('Enter email: ');
-    String email = stdin.readLineSync()!;
-    
-    stdout.write('Enter password: ');
-    String password = stdin.readLineSync()!;
-    
-    if (email == predefinedEmail && password == predefinedPassword) {
-      print('User login successful.');
-      break;
-    } else {
-      print('Incorrect email or password. Please try again.');
+  for (int i = 1; i <= rows; i++) {
+    // Print leading spaces
+    for (int j = i; j < rows; j++) {
+      stdout.write(' ');
     }
+    // Print asterisks
+    for (int k = 1; k <= i; k++) {
+      stdout.write('* ');
+    }
+    // Move to the next line
+    print('');
   }
 }
